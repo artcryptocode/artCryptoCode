@@ -1,0 +1,40 @@
+<script>
+var matrice='//matrice//';
+
+const colors = [
+//colors//
+];
+colors.forEach(element => 
+matrice = matrice.replaceAll(element[0], element[1])
+);
+var pixels = matrice.split('-');
+console.log(pixels);
+var j = '0';
+</script>
+<html>
+<head>
+<style>
+.pixel {
+width:30px;
+height:30px;
+display:inline-block;
+}
+</style>
+</head>
+<body>
+<script>
+    function print(pixel,j){
+        document.write("<div class='pixel' style='background-color:"+pixel+"'></div>");
+        var remainder = j % '24';
+        if (remainder == 0){
+            document.write("<br>");
+            j = '1';
+        }
+    }
+var j = '1';
+pixels.forEach(pixel =>
+print(pixel,j++)
+);
+</script>
+</body>
+</html>
