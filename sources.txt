@@ -1,0 +1,32 @@
+Cryptopunks : https://www.larvalabs.com/cryptopunks
+
+cryptopunksnotdead : 
+https://github.com/cryptopunksnotdead/cryptopunks
+
+Rubygems : 
+Pixelart : 
+https://rubygems.org/gems/pixelart
+gem install pixelart
+
+Cryptopunks :
+https://rubygems.org/gems/cryptopunks
+gem install cryptopunks
+
+Sass Pixel ART : 
+https://una.im/sass-pixel-art/
+
+Terminal-pixel-art : 
+https://github.com/lucamug/terminal-pixel-art
+
+Python packages : 
+
+Numpy
+Subprocess
+Os
+Sys
+Pil
+Random
+
+Php to generate the final file
+
+
