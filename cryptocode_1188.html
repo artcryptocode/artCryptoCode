@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" shape-rendering="crispEdges" id="svg" style="width:480px"></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" shape-rendering="crispEdges" id="svg" style="width:240px"></svg>
 <script>
-var m='//matrice//';
+var m='78A2B4A5B10AB2A10B2A2B7A16B8A17B8A15B8A9B2C5B7A7B2C2B2C3B10A2B11D2B8A4B2D3ED3FD2B8ABA3BD3ED3FDB10A4B9DB10A3B9C2B12ABG4C2B2CB13AB2G6CGB13AB9GB13AB4G3B2GB13ABC8GB13AB2C6GB14AB3C5B15AB3CB19AB3CB13A';
 function chunk_split (body, chunklen, end) {
     chunklen = parseInt(chunklen, 10) || 76;
     end = end || '\r\n';
@@ -20,7 +20,14 @@ function decode(input){
 m=chunk_split(decode(m), 1, '-').trim().slice(0,-1)
 console.log(m);
 const colors = [
-//colors//
+['A' , '#ffffff'],
+['B' , '#000000'],
+['C' , '#ae8b61'],
+['D' , '#f0f0f0'],
+['E' , '#328dfd'],
+['F' , '#fd3232'],
+['G' , '#a66e2c'],
+
 ];
 colors.forEach(element => 
 m = m.replaceAll(element[0], element[1])

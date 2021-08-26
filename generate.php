@@ -1,6 +1,15 @@
 <?php 
 $id = $argv['1'] ?? '0000';
-
+function encode($input)
+{
+    return preg_replace_callback(
+        '/(.)\\1+/',
+        function ($matches) {
+            return strlen($matches[0]).$matches[1];
+        },
+        $input
+    );
+}
 $size = '20';
 $multiple = '24';
 $matrice = file_get_contents("matrice-$id.txt");
@@ -35,7 +44,7 @@ foreach($matrice_arr as $rgb){
     
     $final .= "$new_rgb-";
 }
-$final = substr($final, 0, -1);
+$final = encode(str_replace('-','',substr($final, 0, -1)));
 //print_r($new_arr);
 foreach($new_arr as $k => $w){
     $symbol = $w['symbol'];

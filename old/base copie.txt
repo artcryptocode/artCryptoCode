@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" shape-rendering="crispEdges" id="svg" style="width:480px"></svg>
+<style>
+    .pixel { width:24px;height:24px;display:inline-block;opacity:0.8; }
+    code { font-size:11px; }
+    .punk { position:absolute;top:0px;transform: scaleX(-1) rotate(-10deg); }
+    </style>
+    <div class="punk">
 <script>
 var m='//matrice//';
 function chunk_split (body, chunklen, end) {
@@ -28,19 +33,14 @@ m = m.replaceAll(element[0], element[1])
 var pixels = m.split('-');
 console.log(pixels);
 var j = '0';
-var x = '0';
-var y = '0';
     function print(pixel,j){
-        if(pixel != '#ffffff'){
-            document.getElementById('svg').innerHTML +=('<rect fill="'+pixel+'" x="'+x+'" y="'+y+'" width="1" height="1" />');
-        }
-       var remainder = j % '24';
-        x++;
+        document.write("<div class='pixel' style='background-color:"+pixel+"'></div>");
+        var remainder = j % '24';
         if (remainder == 0){
-           x = '0';
-            y++;
+            document.write("<br>");
+            j = '1';
         }
-       }
+    }
 var j = '1';
 pixels.forEach(pixel =>
 print(pixel,j++)

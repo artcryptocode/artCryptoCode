@@ -1,0 +1,41 @@
+<style>
+    .pixel { width:24px;height:24px;display:inline-block;opacity:1; border:0px }
+    code { font-size:11px; }
+    .punk { position:absolute;top:0px;transform: scaleX(-1) rotate(-10deg); }
+    </style>
+    <div class="punk">
+<script>
+var m='A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-C-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-C-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-C-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-B-B-C-B-B-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-B-C-B-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-E-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-E-D-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-F-F-D-D-D-F-F-B-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-B-G-D-D-D-B-G-B-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-D-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-B-H-B-D-D-D-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-B-B-D-D-D-D-D-B-B-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-B-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-D-B-B-B-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-D-D-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-B-B-B-B-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-B-D-D-D-B-A-A-A-A-A-A-A-A-A-A-A-A-A';
+
+const colors = [
+['A' , '#ffffff'],
+['B' , '#000000'],
+['C' , '#555555'],
+['D' , '#ae8b61'],
+['E' , '#b69f82'],
+['F' , '#86581e'],
+['G' , '#a77c47'],
+['H' , '#ffd926'],
+
+];
+colors.forEach(element => 
+m = m.replaceAll(element[0], element[1])
+);
+var pixels = m.split('-');
+console.log(pixels);
+var j = '0';
+    function print(pixel,j){
+        document.write("<div class='pixel' style='background-color:"+pixel+"'></div>");
+        var remainder = j % '24';
+        if (remainder == 0){
+            document.write("<br>");
+            j = '1';
+        }
+    }
+var j = '1';
+pixels.forEach(pixel =>
+print(pixel,j++)
+);
+</script>
+<!--punk #4842 -->
+</div>

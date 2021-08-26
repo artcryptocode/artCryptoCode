@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" shape-rendering="crispEdges" id="svg" style="width:480px"></svg>
 <script>
-var m='//matrice//';
+var m='35AB22ABCB21ABCB21ABCB19A3BC3B16AB2DBCB2DB14AB2DE6DB13ABDE7DB13AB9DB13AB9DB2AF10A11B2AF9A2B2D2B3D3B2AF9AB3D2B3D3B2AF9A2B9DB2AF10AB5D2B2DB2AF10AB9DB13AB7D6B10AB4D3B5GHB9AB7D6B10AB8DB14AB3D5B15AB3DB19AB3DB13A';
 function chunk_split (body, chunklen, end) {
     chunklen = parseInt(chunklen, 10) || 76;
     end = end || '\r\n';
@@ -20,7 +20,15 @@ function decode(input){
 m=chunk_split(decode(m), 1, '-').trim().slice(0,-1)
 console.log(m);
 const colors = [
-//colors//
+['A' , '#ffffff'],
+['B' , '#000000'],
+['C' , '#555555'],
+['D' , '#ae8b61'],
+['E' , '#b69f82'],
+['F' , '#eeeeee'],
+['G' , '#c6c6c6'],
+['H' , '#e25b26'],
+
 ];
 colors.forEach(element => 
 m = m.replaceAll(element[0], element[1])
